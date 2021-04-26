@@ -1,0 +1,51 @@
+/* Slick Arrows */
+body {
+  .slick-prev,
+  .slick-next {
+    width: 40px;
+    height: 40px;
+    z-index: 10;
+  }
+  .slick-prev:before,
+  .slick-next:before {
+    font-size: 40px;
+    color: #ffffff;
+  }
+  .slick-prev {
+    left: 25px;
+    @media (max-width: 767px) {
+      left: 12.5px;
+    }
+  }
+  [dir='rtl'] .slick-prev {
+    right: 25px;
+    @media (max-width: 767px) {
+      right: 12.5px;
+    }
+    left: auto;
+  }
+  .slick-next {
+    right: 25px;
+    @media (max-width: 767px) {
+      right: 12.5px;
+    }
+  }
+  [dir='rtl'] .slick-next {
+    right: auto;
+    left: 25px;
+    @media (max-width: 767px) {
+      left: 12.5px;
+    }
+  }
+
+  .rtl {
+      font-family: 'Cairo', 'sans-serif';
+    .slick-slide {
+      float: left !important;
+    }
+  }
+
+
+}
+
+

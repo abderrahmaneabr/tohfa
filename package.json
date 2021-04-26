@@ -1,0 +1,46 @@
+{
+  "name": "linkom",
+  "private": true,
+  "scripts": {
+    "build": "gridsome build",
+    "develop": "gridsome develop",
+    "explore": "gridsome explore",
+    "analyze": "ANALYZE=true gridsome build"
+  },
+  "dependencies": {
+    "@gridsome/source-filesystem": "^0.6.2",
+    "@gridsome/transformer-remark": "^0.4.0",
+    "@tailwindcss/forms": "^0.2.1",
+    "@tailwindcss/typography": "^0.4.0",
+    "axios": "^0.21.1",
+    "dotenv": "^8.2.0",
+    "esbuild": "^0.9.6",
+    "gridsome": "^0.7.0",
+    "gridsome-plugin-i18n": "^1.6.0",
+    "gridsome-plugin-netlify-cms": "^1.0.9",
+    "gridsome-plugin-tailwindcss": "^2.2.30",
+    "js-cookie": "^2.2.1",
+    "marked": "^2.0.1",
+    "netlify-cms": "^2.10.8",
+    "tailwind-heropatterns": "^0.0.7",
+    "tailwindcss-aspect-ratio": "^3.0.0",
+    "v-click-outside": "^3.1.2",
+    "vue-light-gallery": "^1.0.1",
+    "vue-mobile-detection": "^1.0.0",
+    "vue-slick-carousel": "^1.0.6"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "eslint": ">=6.2.2",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": ">=2.20.0",
+    "eslint-plugin-node": ">=9.1.0",
+    "eslint-plugin-promise": ">=4.2.1",
+    "eslint-plugin-standard": ">=4.0.0",
+    "eslint-plugin-vue": "^6.1.2",
+    "sass": "^1.32.6",
+    "sass-loader": "7.3.1",
+    "tailwindcss-rtl": "^0.7.3",
+    "webpack-bundle-analyzer": "^3.6.0"
+  }
+}

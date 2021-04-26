@@ -1,0 +1,337 @@
+display_url: "https://Tohfa-meubles.dz"
+show_preview_links: false
+
+backend:
+  name: git-gateway
+
+media_folder: static/media
+public_folder: /media
+
+locale: "fr"
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    editor:
+      preview: false
+    files:
+      - file: "content/home.md"
+        label: "Page d'accueil"
+        name: "home"
+        fields:
+          - label: "Slides"
+            name: "slider"
+            widget: "list"
+            field: { label: "Image", name: "image", widget: "image" }
+          - label: "Introduction"
+            name: "intro"
+            widget: "object"
+            fields:
+              - label: "Titre" 
+                name: "title" 
+                widget: "object" 
+                fields:
+                - {label: "Français", name: "fr", widget: "string"}
+                - {label: "English", name: "en", widget: "string"}
+                - {label: "العربية", name: "ar", widget: "string"}
+              - label: "Texte"
+                name: "description" 
+                widget: "object"
+                fields:
+                - {label: "Français", name: "fr", widget: "text"}
+                - {label: "English", name: "en", widget: "text"}
+                - {label: "العربية", name: "ar", widget: "text"}
+              - { label: "Image", name: "cover", widget: "image", hint: "Veuillez sélectionner une image d'un minimum de 576x360 pixels" }
+              - { label: 'Video', name: 'video', widget: 'string', required: false, hint: "Coller l'identifiant de la vidéo Youtube. (ex: L5vYQs5aPxY)" }
+          - label: "Section from our clients"
+            name: "gallery"
+            widget: "object"
+            fields:
+              - {
+                name: "gallery",
+                label: "Galerie",
+                widget: "list",
+                required: false,
+                field: 
+                  { name: "image", label: "Image", widget: "image", hint: "Veuillez sélectionner une image d'un minimum de 1024x700 pixels", required: false}, 
+                }
+          - label: "Section nos services"
+            name: "qualitySection"
+            widget: "object"
+            fields:
+              - label: "Titre"
+                name: "title" 
+                widget: "object" 
+                fields:
+                - {label: "Français", name: "fr", widget: "string"}
+                - {label: "English", name: "en", widget: "string"}
+                - {label: "العربية", name: "ar", widget: "string"}
+              - label: "Texte"
+                name: "description" 
+                widget: "object"
+                fields:
+                - {label: "Français", name: "fr", widget: "text"}
+                - {label: "English", name: "en", widget: "text"}
+                - {label: "العربية", name: "ar", widget: "text"}
+              - { label: "Image", name: "cover", widget: "image", hint: "Veuillez sélectionner une image d'un minimum de 900x600 pixels" }
+          - label: "Section les valeurs et les qualités"
+            name: "values"
+            widget: "object"
+            fields:
+              - label: "Valeur (1)"
+                name: "valueone" 
+                widget: "object" 
+                fields:
+                - {label: "Français", name: "fr", widget: "string"}
+                - {label: "English", name: "en", widget: "string"}
+                - {label: "العربية", name: "ar", widget: "string"}
+              - label: "Valeur (2)"
+                name: "valuetwo" 
+                widget: "object" 
+                fields:
+                - {label: "Français", name: "fr", widget: "string"}
+                - {label: "English", name: "en", widget: "string"}
+                - {label: "العربية", name: "ar", widget: "string"}
+              - label: "Valeur (3)"
+                name: "valuethree" 
+                widget: "object" 
+                fields:
+                - {label: "Français", name: "fr", widget: "string"}
+                - {label: "English", name: "en", widget: "string"}
+                - {label: "العربية", name: "ar", widget: "string"}
+              - label: "Valeur (4)"
+                name: "valuefour" 
+                widget: "object" 
+                fields:
+                - {label: "Français", name: "fr", widget: "string"}
+                - {label: "English", name: "en", widget: "string"}
+                - {label: "العربية", name: "ar", widget: "string"}
+          - label: "Section call to action"
+            name: "cta"
+            widget: "object"
+            fields:
+              - label: "Titre"
+                name: "title" 
+                widget: "object" 
+                fields:
+                - {label: "Français", name: "fr", widget: "string"}
+                - {label: "English", name: "en", widget: "string"}
+                - {label: "العربية", name: "ar", widget: "string"}
+              - label: "Texte"
+                name: "text" 
+                widget: "object"
+                fields:
+                - {label: "Français", name: "fr", widget: "text"}
+                - {label: "English", name: "en", widget: "text"}
+                - {label: "العربية", name: "ar", widget: "text"}
+      - file: "content/about.md"
+        label: "Page de présentation"
+        name: "about"
+        fields:
+          - label: "Nom"
+            name: "title" 
+            widget: "string" 
+          - label: "Titre"
+            name: "name" 
+            widget: "object" 
+            fields:
+            - {label: "Français", name: "fr", widget: "string"}
+            - {label: "English", name: "en", widget: "string"}
+            - {label: "العربية", name: "ar", widget: "string"}
+          - label: "Texte"
+            name: "description" 
+            widget: "object"
+            fields:
+            - {label: "Français", name: "fr", widget: "markdown"}
+            - {label: "English", name: "en", widget: "markdown"}
+            - {label: "العربية", name: "ar", widget: "markdown"}
+          - { name: "image", label: "Image", widget: "image", hint: "Veuillez sélectionner une image d'un minimum de 1600x500 pixels"}
+      - file: "content/quality.md"
+        label: "Page de qualité"
+        name: "quality"
+        fields:
+          - label: "Nom"
+            name: "title" 
+            widget: "string" 
+          - label: "Titre"
+            name: "name" 
+            widget: "object" 
+            fields:
+            - {label: "Français", name: "fr", widget: "string"}
+            - {label: "English", name: "en", widget: "string"}
+            - {label: "العربية", name: "ar", widget: "string"}
+          - label: "Texte"
+            name: "description" 
+            widget: "object"
+            fields:
+            - {label: "Français", name: "fr", widget: "markdown"}
+            - {label: "English", name: "en", widget: "markdown"}
+            - {label: "العربية", name: "ar", widget: "markdown"}
+          - { name: "image", label: "Image", widget: "image", hint: "Veuillez sélectionner une image d'un minimum de 1600x500 pixels"}
+          - {
+            name: "gallery",
+            label: "Galerie",
+            widget: "list",
+            required: false,
+            field: { name: "image", label: "Image", widget: "image", required: false, hint: "Veuillez sélectionner une image d'un minimum de 1024x700 pixels", },
+            }
+      - file: "content/recruitment.md"
+        label: "Page de recrutement"
+        name: "recruitment"
+        fields:
+          - label: "Nom"
+            name: "title" 
+            widget: "string" 
+          - label: "Titre"
+            name: "name" 
+            widget: "object" 
+            fields:
+            - {label: "Français", name: "fr", widget: "string"}
+            - {label: "English", name: "en", widget: "string"}
+            - {label: "العربية", name: "ar", widget: "string"}
+          - label: "Texte"
+            name: "description" 
+            widget: "object"
+            fields:
+            - {label: "Français", name: "fr", widget: "markdown", required: false}
+            - {label: "English", name: "en", widget: "markdown", required: false}
+            - {label: "العربية", name: "ar", widget: "markdown", required: false}
+          - { name: "image", label: "Image", widget: "image", hint: "Veuillez sélectionner une image d'un minimum de 1600x500 pixels"}
+      - file: "content/contact.md"
+        label: "Page de contact"
+        name: "contact"
+        fields:
+          - label: "Nom"
+            name: "title" 
+            widget: "string" 
+          - label: "Titre"
+            name: "name" 
+            widget: "object" 
+            fields:
+            - {label: "Français", name: "fr", widget: "string"}
+            - {label: "English", name: "en", widget: "string"}
+            - {label: "العربية", name: "ar", widget: "string"}
+          - label: "Texte"
+            name: "description" 
+            widget: "object"
+            fields:
+            - {label: "Français", name: "fr", widget: "text", required: false}
+            - {label: "English", name: "en", widget: "text", required: false}
+            - {label: "العربية", name: "ar", widget: "text", required: false}
+          - { name: "image", label: "Image", widget: "image", hint: "Veuillez sélectionner une image d'un minimum de 1600x500 pixels"}
+          - {
+              name: "phones",
+              label: "Téléphone(s)",
+              widget: "string",
+              required: false,
+            }
+          - {
+              name: "fax",
+              label: "Fax",
+              widget: "string",
+              required: false,
+            }
+          - {
+              name: "emails",
+              label: "Adresse(s) Email",
+              widget: "string",
+              required: false,
+            }
+          - { name: "address", label: "Adresse", widget: "string", required: false, }
+          - name: "social"
+            label: "Réseaux sociaux"
+            widget: "object"
+            fields:
+              - { name: "facebook", label: "Facebook", widget: "string", required: false }
+              - { name: "instagram", label: "Instagram", widget: "string", required: false }
+              - { name: "linkedin", label: "LinkedIn", widget: "string", required: false }
+  - name: "products"
+    label: "Produits"
+    singular_label: "product"
+    folder: "content/products"
+    create: true
+    editor:
+      preview: false
+    fields:
+      - label: "Nom" 
+        name: "title"
+        widget: "string" 
+      - label: "Titre" 
+        name: "name"
+        widget: "object" 
+        fields:
+        - {label: "Français", name: "fr", widget: "string"}
+        - {label: "English", name: "en", widget: "string"}
+        - {label: "العربية", name: "ar", widget: "string"}
+      - label: "Description courte"
+        name: "shortDesc"
+        widget: "object"
+        hint: "Description à afficher sur la page d'accueil. Ne peut pas dépasser 500 caractères"
+        fields:
+        - {label: "Français", name: "fr", widget: "text"}
+        - {label: "English", name: "en", widget: "text"}
+        - {label: "العربية", name: "ar", widget: "text"}
+      - name: "features_fr"
+        label: "Caractéristiques (Français)"
+        widget: "list"
+        required: false
+        fields: 
+          - name: "title"
+            label: "Titre" 
+            widget: "string"
+            required: false
+          - name: "description"
+            label: "Description"
+            widget: "markdown"
+            editor_components: [""]
+            buttons: ["bold","italic","link","heading-four","heading-five","heading-six", "bulleted-list", "heading-six"]
+            required: false
+      - name: "features_en"
+        label: "Caractéristiques - features (English)"
+        widget: "list"
+        required: false
+        fields: 
+          - name: "title"
+            label: "Titre" 
+            widget: "string"
+            required: false
+          - name: "description"
+            label: "Description"
+            widget: "markdown"
+            editor_components: [""]
+            buttons: ["bold","italic","link","heading-four","heading-five","heading-six", "bulleted-list", "heading-six"]
+            required: false
+      - name: "features_ar"
+        label: "Caractéristiques - (الخصائص)"
+        widget: "list"
+        required: false
+        fields: 
+          - name: "title"
+            label: "Titre" 
+            widget: "string"
+            required: false
+          - name: "description"
+            label: "Description"
+            widget: "markdown"
+            editor_components: [""]
+            buttons: ["bold","italic","link","heading-four","heading-five","heading-six", "bulleted-list", "heading-six"]
+            required: false
+      - label: "Photos"
+        name: "photos" 
+        widget: "object" 
+        fields:
+        - { name: "mainPhoto", label: "Image", widget: "image", hint: "Veuillez sélectionner une image d'un minimum de 1800x600 pixels", }
+        - {
+          name: "gallery",
+          label: "Galerie",
+          widget: "list",
+          required: false,
+          field: 
+            { name: "image", label: "Image", widget: "image", hint: "Veuillez sélectionner une image d'un minimum de 1024x700 pixels", required: false}, 
+          }
+      - label: "Ordre"
+        name: "Order" 
+        widget: "string" 
+        required: false
+      
+      
